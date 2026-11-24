@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8"><style id="qw-theme">:root {
+  --contextual-navbar-foreground-color: #000000 !important;
+  --connection-foreground-color: #FFFFFF !important;
+  --automation-foreground-color: #FFFFFF !important;
+  --global-navbar-background-color: #F3F3F7 !important;
+  --accent-foreground-color: #FFFFFF !important;
+  --primary-foreground-color: #000000 !important;
+  --measure-foreground-color: #CB7600 !important;
+  --dimension-foreground-color: #1B84BF !important;
+  --warning-background-color: #FF9800 !important;
+  --warning-foreground-color: #000000 !important;
+  --success-background-color: #27700E !important;
+  --info-foreground-color: #FFFFFF !important;
+  --secondary-foreground-color: #000000 !important;
+  --info-background-color: #2196F3 !important;
+  --measure-background-color: #FFF8EF !important;
+  --contextual-navbar-background-color: #FFFFFF !important;
+  --accent-background-color: #4200DB !important;
+  --visualization-background-color: #6842FF !important;
+  --connection-background-color: #FF4B14 !important;
+  --secondary-background-color: #F9F9FB !important;
+  --danger-background-color: #C82745 !important;
+  --automation-background-color: #D600BA !important;
+  --success-foreground-color: #FFFFFF !important;
+  --danger-foreground-color: #FFFFFF !important;
+  --dimension-background-color: #EEF8FF !important;
+  --insight-foreground-color: #FFFFFF !important;
+  --primary-background-color: #FFFFFF !important;
+  --insight-background-color: #78008A !important;
+  --visualization-foreground-color: #FFFFFF !important;
+  --global-navbar-foreground-color: #5A5A5B !important;
+  --chat-column-base: 720px !important;
+  --chat-column-max: 720px !important;
+  --color-bg: #faf9fc !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-divider: rgba(0, 0, 0, .12) !important;
+  --color-leftnav-bg: #ffffff !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #ffffff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: rgba(0, 0, 0, .12) !important;
+  --color-border-light: rgba(0, 0, 0, .06) !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: rgba(255, 255, 255, 0) !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-selection-outline-offset: 2px !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #ffffff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #F3F3F7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #ffffff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #ffffff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #ffffff !important;
+  --color-overlay: rgba(0, 0, 0, .5) !important;
+  --color-shadow: rgba(0, 0, 0, .08) !important;
+  --color-hover: rgba(0, 0, 0, .05) !important;
+  --color-tooltip-bg: rgba(0, 0, 0, .85) !important;
+  --color-tooltip-text: #ffffff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4) !important;
+  --color-voice-red-glow: rgba(219, 0, 0, .4) !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05) !important;
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08) !important;
+  --shadow-lg: 0 4px 16px 4px rgba(0, 0, 0, .16), 0 2px 6px 1px rgba(0, 0, 0, .16) !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #F3F3F7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #F3F3F7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --qs-data-cat-01: #4338CA !important;
+  --qs-data-cat-02: #D97706 !important;
+  --qs-data-cat-03: #0891B2 !important;
+  --qs-data-cat-04: #8B5CF6 !important;
+  --qs-data-cat-05: #15803D !important;
+  --qs-data-cat-06: #0C4A6E !important;
+  --qs-data-cat-07: #D946EF !important;
+  --qs-data-cat-08: #65A30D !important;
+  --qs-data-cat-09: #1D4ED8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #C2410C !important;
+  --qs-data-cat-12: #115E59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --qs-content: #fff !important;
+  --qs-main: #f9f9fb !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-error-default: #db0000 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0px !important;
+  --safe-bottom: 0px !important;
+  --safe-left: 0px !important;
+  --safe-right: 0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-active-hover: #b2a8ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-blue-100: #e2ebff !important;
+  --qs-blue-1000: #060d27 !important;
+  --qs-blue-200: #c2d5ff !important;
+  --qs-blue-300: #9fbdff !important;
+  --qs-blue-400: #7ea0fc !important;
+  --qs-blue-50: #fafbff !important;
+  --qs-blue-500: #517df6 !important;
+  --qs-blue-600: #2d5fe8 !important;
+  --qs-blue-700: #1d3cb9 !important;
+  --qs-blue-800: #162c85 !important;
+  --qs-blue-900: #102165 !important;
+  --qs-blue-950: #0b1746 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-control-selected-bg: #4200db !important;
+  --qs-control-selected-hover-bg: #35009e !important;
+  --qs-darkpurple1-100: #eee1ef !important;
+  --qs-darkpurple1-1000: #130b14 !important;
+  --qs-darkpurple1-200: #dcc0dd !important;
+  --qs-darkpurple1-300: #c99ecc !important;
+  --qs-darkpurple1-400: #b57ab8 !important;
+  --qs-darkpurple1-50: #f8f2f8 !important;
+  --qs-darkpurple1-500: #97529b !important;
+  --qs-darkpurple1-600: #754078 !important;
+  --qs-darkpurple1-700: #542e57 !important;
+  --qs-darkpurple1-800: #472749 !important;
+  --qs-darkpurple1-900: #341c35 !important;
+  --qs-darkpurple1-950: #241325 !important;
+  --qs-darkpurple2-100: #f1e3fc !important;
+  --qs-darkpurple2-1000: #1b042f !important;
+  --qs-darkpurple2-200: #e7d0fb !important;
+  --qs-darkpurple2-300: #d6b0f8 !important;
+  --qs-darkpurple2-400: #be81f3 !important;
+  --qs-darkpurple2-50: #f8f1fe !important;
+  --qs-darkpurple2-500: #a652ef !important;
+  --qs-darkpurple2-600: #8e24eb !important;
+  --qs-darkpurple2-700: #7413c9 !important;
+  --qs-darkpurple2-800: #580e98 !important;
+  --qs-darkpurple2-900: #36095d !important;
+  --qs-darkpurple2-950: #260642 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-display: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-gradient-automation-light-stop: #ffe0fb !important;
+  --qs-gradient-automation-medium-stop: #b3008f !important;
+  --qs-gradient-automation-stop: #d600ba !important;
+  --qs-gradient-connection-light-stop: #ffe0d6 !important;
+  --qs-gradient-connection-stop: #db3300 !important;
+  --qs-gradient-insight-light-stop: #fce6ff !important;
+  --qs-gradient-insight-stop: #a000b8 !important;
+  --qs-gradient-visualization-light-stop: #f2e5ff !important;
+  --qs-gradient-visualization-stop: #7300e5 !important;
+  --qs-green-100: #ccffd8 !important;
+  --qs-green-1000: #001409 !important;
+  --qs-green-200: #a9efba !important;
+  --qs-green-300: #84d39a !important;
+  --qs-green-400: #71c68c !important;
+  --qs-green-50: #f0fff3 !important;
+  --qs-green-500: #5bbe7a !important;
+  --qs-green-600: #3c955a !important;
+  --qs-green-700: #227340 !important;
+  --qs-green-800: #00441f !important;
+  --qs-green-900: #003317 !important;
+  --qs-green-950: #002410 !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-0: #fff !important;
+  --qs-neutral-100: #f5f3ef !important;
+  --qs-neutral-1000: #0b0a0a !important;
+  --qs-neutral-200: #ece9e4 !important;
+  --qs-neutral-300: #e2dfda !important;
+  --qs-neutral-400: #cdc9c1 !important;
+  --qs-neutral-50: #faf9f7 !important;
+  --qs-neutral-500: #adaaa3 !important;
+  --qs-neutral-600: #94918b !important;
+  --qs-neutral-700: #7d7a73 !important;
+  --qs-neutral-800: #5e5b56 !important;
+  --qs-neutral-900: #302f2c !important;
+  --qs-neutral-950: #151310 !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-popover-border: transparent !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-progress-active: #4200db !important;
+  --qs-red-100: #ffe4e1 !important;
+  --qs-red-1000: #240004 !important;
+  --qs-red-200: #ffc7c2 !important;
+  --qs-red-300: #ffa099 !important;
+  --qs-red-400: #eb6560 !important;
+  --qs-red-50: #fff6f5 !important;
+  --qs-red-500: #c33c38 !important;
+  --qs-red-600: #aa2b2b !important;
+  --qs-red-700: #8a0f0f !important;
+  --qs-red-800: #6e000d !important;
+  --qs-red-900: #57000a !important;
+  --qs-red-950: #3d0007 !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-shadow: #00000029 !important;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029 !important;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029 !important;
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029 !important;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029 !important;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-yellow-100: #fff5cf !important;
+  --qs-yellow-1000: #1f1100 !important;
+  --qs-yellow-200: #ffe79e !important;
+  --qs-yellow-300: #fbd86f !important;
+  --qs-yellow-400: #facb3d !important;
+  --qs-yellow-50: #fffcf0 !important;
+  --qs-yellow-500: #e2ac36 !important;
+  --qs-yellow-600: #ca8d2b !important;
+  --qs-yellow-700: #9d672f !important;
+  --qs-yellow-800: #7a4c19 !important;
+  --qs-yellow-900: #522e00 !important;
+  --qs-yellow-950: #381f00 !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: rgba(180, 0, 170, 1) !important;
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1) !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QRIS Statis → Dinamis</title>
+<style nonce="JU4WuA5UTE660nFtwyAxlg==">
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#f3f5f9;margin:0;padding:16px;color:#1d2433}
+.card{max-width:480px;margin:0 auto;background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+h1{font-size:20px;margin:0 0 4px}p.sub{margin:0 0 16px;color:#667;font-size:13px}
+label{display:block;font-weight:600;font-size:13px;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:10px;border:1px solid #ccd;border-radius:10px;font-size:15px}
+textarea{font-family:monospace;font-size:12px;height:70px}
+.row{display:flex;gap:8px}.row>*{flex:1}
+button{width:100%;padding:12px;border:0;border-radius:10px;background:#c8102e;color:#fff;font-size:16px;font-weight:600;margin-top:16px;cursor:pointer}
+button.sec{background:#1d2433}
+.msg{font-size:13px;margin-top:8px}.ok{color:#0a7a3b}.err{color:#c8102e}
+#out{text-align:center;margin-top:18px;display:none}#qr img{width:260px;height:260px;image-rendering:pixelated}
+.info{font-size:13px;background:#f6f7fb;border-radius:10px;padding:10px;margin-top:10px;text-align:left}
+small{color:#889}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>QRIS Statis → Dinamis</h1>
+<p class="sub">Semua proses berjalan di browser Anda. Data tidak dikirim ke mana pun.</p>
+
+<label>1. Unggah gambar QRIS statis</label>
+<input type="file" id="file" accept="image/*">
+<label>atau tempel kode QRIS</label>
+<textarea id="raw" placeholder="000201010211..."></textarea>
+<div id="m1" class="msg"></div>
+<button class="sec" id="save">Simpan QRIS di browser ini</button>
+
+<label>2. Nominal (Rp)</label>
+<input type="number" id="amt" min="1" placeholder="contoh: 25000">
+
+<label>Biaya layanan (opsional)</label>
+<div class="row">
+<select id="feeType"><option value="">Tanpa biaya</option><option value="fix">Tetap (Rp)</option><option value="pct">Persen (%)</option></select>
+<input type="number" id="fee" step="0.01" placeholder="0">
+</div>
+
+<button id="go">Buat QRIS Dinamis</button>
+<div id="m2" class="msg"></div>
+
+<div id="out">
+<div id="qr"></div>
+<div class="info" id="det"></div>
+<button class="sec" id="dl">Unduh PNG</button>
+<small>Uji dulu dengan nominal kecil sebelum dipakai ke pelanggan.</small>
+</div>
+</div>
+
+<script>
+
+const QR=(function(){
+const ECC=[-1,10,16,26,18,24,16,18,22,22,26,30,22,22,24,24,28,28,26,26,26,26,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28];
+const NB=[-1,1,1,1,2,2,4,4,4,5,5,5,8,9,9,10,10,11,13,14,16,17,17,18,20,21,23,25,26,28,29,31,33,35,37,38,40,43,45,47,49];
+function rawMods(v){let r=(16*v+128)*v+64;if(v>=2){const n=Math.floor(v/7)+2;r-=(25*n-10)*n-55;if(v>=7)r-=36}return r}
+function dataCw(v){return Math.floor(rawMods(v)/8)-ECC[v]*NB[v]}
+function mul(x,y){let z=0;for(let i=7;i>=0;i--){z=(z<<1)^((z>>>7)*0x11D);z^=((y>>>i)&1)*x}return z&255}
+function rsDiv(d){const r=new Array(d).fill(0);r[d-1]=1;let root=1;for(let i=0;i<d;i++){for(let j=0;j<d;j++){r[j]=mul(r[j],root);if(j+1<d)r[j]^=r[j+1]}root=mul(root,2)}return r}
+function rsRem(data,div){const r=div.map(()=>0);for(const b of data){const f=b^r.shift();r.push(0);div.forEach((c,i)=>r[i]^=mul(c,f))}return r}
+function alignPos(v,size){if(v==1)return[];const n=Math.floor(v/7)+2;const step=v==32?26:Math.ceil((v*4+4)/(n*2-2))*2;const r=[6];for(let p=size-7;r.length<n;p-=step)r.splice(1,0,p);return r}
+function encode(text){
+const bytes=Array.from(new TextEncoder().encode(text));let v=1;
+for(;v<=40;v++){const cc=v<10?8:16;if(4+cc+bytes.length*8<=dataCw(v)*8)break}
+if(v>40)throw'Data terlalu panjang untuk QR';
+const cap=dataCw(v)*8,bits=[];const put=(val,len)=>{for(let i=len-1;i>=0;i--)bits.push((val>>>i)&1)};
+put(4,4);put(bytes.length,v<10?8:16);bytes.forEach(b=>put(b,8));
+put(0,Math.min(4,cap-bits.length));put(0,(8-bits.length%8)%8);
+for(let p=0xEC;bits.length<cap;p^=0xEC^0x11)put(p,8);
+const dc=[];for(let i=0;i<bits.length;i+=8)dc.push(parseInt(bits.slice(i,i+8).join(''),2));
+const nb=NB[v],eb=ECC[v],raw=Math.floor(rawMods(v)/8),ns=nb-raw%nb,sl=Math.floor(raw/nb),div=rsDiv(eb),blocks=[];
+for(let i=0,k=0;i<nb;i++){const dat=dc.slice(k,k+sl-eb+(i<ns?0:1));k+=dat.length;const ec=rsRem(dat,div);if(i<ns)dat.push(0);blocks.push(dat.concat(ec))}
+const all=[];for(let i=0;i<blocks[0].length;i++)blocks.forEach((b,j)=>{if(i!=sl-eb||j>=ns)all.push(b[i])});
+const size=v*4+17,M=[],F=[];for(let i=0;i<size;i++){M.push(new Array(size).fill(false));F.push(new Array(size).fill(false))}
+const set=(x,y,d)=>{M[y][x]=d;F[y][x]=true};
+for(let i=0;i<size;i++){set(6,i,i%2==0);set(i,6,i%2==0)}
+const finder=(x,y)=>{for(let dy=-4;dy<=4;dy++)for(let dx=-4;dx<=4;dx++){const d=Math.max(Math.abs(dx),Math.abs(dy)),xx=x+dx,yy=y+dy;if(xx>=0&&xx<size&&yy>=0&&yy<size)set(xx,yy,d!=2&&d!=4)}};
+finder(3,3);finder(size-4,3);finder(3,size-4);
+const ap=alignPos(v,size);ap.forEach((a,i)=>ap.forEach((b,j)=>{if(!((i==0&&j==0)||(i==0&&j==ap.length-1)||(i==ap.length-1&&j==0)))for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++)set(a+dx,b+dy,Math.max(Math.abs(dx),Math.abs(dy))!=1)}));
+const fmt=m=>{const d=(0<<3)|m;let r=d;for(let i=0;i<10;i++)r=(r<<1)^((r>>>9)*0x537);const b=((d<<10)|r)^0x5412;const g=i=>((b>>>i)&1)!=0;
+for(let i=0;i<=5;i++)set(8,i,g(i));set(8,7,g(6));set(8,8,g(7));set(7,8,g(8));for(let i=9;i<15;i++)set(14-i,8,g(i));
+for(let i=0;i<8;i++)set(size-1-i,8,g(i));for(let i=8;i<15;i++)set(8,size-15+i,g(i));set(8,size-8,true)};
+fmt(0);
+if(v>=7){let r=v;for(let i=0;i<12;i++)r=(r<<1)^((r>>>11)*0x1F25);const b=(v<<12)|r;for(let i=0;i<18;i++){const bt=((b>>>i)&1)!=0,a=size-11+i%3,c=Math.floor(i/3);set(a,c,bt);set(c,a,bt)}}
+let i=0;for(let right=size-1;right>=1;right-=2){if(right==6)right=5;for(let vert=0;vert<size;vert++)for(let j=0;j<2;j++){const x=right-j,up=((right+1)&2)==0,y=up?size-1-vert:vert;if(!F[y][x]&&i<all.length*8){M[y][x]=((all[i>>>3]>>>(7-(i&7)))&1)!=0;i++}}}
+const mask=(m)=>{for(let y=0;y<size;y++)for(let x=0;x<size;x++){let inv;switch(m){case 0:inv=(x+y)%2==0;break;case 1:inv=y%2==0;break;case 2:inv=x%3==0;break;case 3:inv=(x+y)%3==0;break;case 4:inv=(Math.floor(x/3)+Math.floor(y/2))%2==0;break;case 5:inv=x*y%2+x*y%3==0;break;case 6:inv=(x*y%2+x*y%3)%2==0;break;default:inv=((x+y)%2+x*y%3)%2==0}if(!F[y][x]&&inv)M[y][x]=!M[y][x]}};
+const penalty=()=>{let p=0;for(let y=0;y<size;y++){let run=1;for(let x=1;x<=size;x++){if(x<size&&M[y][x]==M[y][x-1])run++;else{if(run>=5)p+=run-2;run=1}}}
+for(let x=0;x<size;x++){let run=1;for(let y=1;y<=size;y++){if(y<size&&M[y][x]==M[y-1][x])run++;else{if(run>=5)p+=run-2;run=1}}}
+for(let y=0;y<size-1;y++)for(let x=0;x<size-1;x++){const c=M[y][x];if(c==M[y][x+1]&&c==M[y+1][x]&&c==M[y+1][x+1])p+=3}
+let dark=0;M.forEach(r=>r.forEach(c=>{if(c)dark++}));p+=Math.floor(Math.abs(dark*20-size*size*10)/(size*size))*10;return p};
+let best=0,bp=1e9;for(let m=0;m<8;m++){mask(m);fmt(m);const p=penalty();if(p<bp){bp=p;best=m}mask(m)}
+mask(best);fmt(best);return M}
+function toCanvas(text,scale,border){const M=encode(text),n=M.length,c=document.createElement('canvas');c.width=c.height=(n+border*2)*scale;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.fillStyle='#000';for(let y=0;y<n;y++)for(let i=0;i<n;i++)if(M[y][i])x.fillRect((i+border)*scale,(y+border)*scale,scale,scale);return c}
+return{encode,toCanvas}})();
+
+const $=id=>document.getElementById(id);
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}};
+function crc16(s){let c=0xFFFF;for(let i=0;i<s.length;i++){c^=s.charCodeAt(i)<<8;for(let j=0;j<8;j++)c=(c&0x8000)?((c<<1)^0x1021)&0xFFFF:(c<<1)&0xFFFF}return c.toString(16).toUpperCase().padStart(4,'0')}
+function parse(s){const t=[];let i=0;while(i<s.length){const tag=s.substr(i,2),len=parseInt(s.substr(i+2,2),10);if(isNaN(len))throw'Format QRIS rusak';t.push({tag,val:s.substr(i+4,len)});i+=4+len}return t}
+function tlv(tag,v){return tag+String(v.length).padStart(2,'0')+v}
+function validate(s){s=s.trim();if(!s.startsWith('000201'))throw'Bukan kode QRIS yang valid';const body=s.slice(0,-4);if(crc16(body)!==s.slice(-4).toUpperCase())throw'Checksum QRIS asli tidak cocok';return s}
+function merchant(t){const n=t.find(x=>x.tag==='59'),c=t.find(x=>x.tag==='60');return (n?n.val:'?')+(c?' — '+c.val:'')}
+
+$('file').onchange=async e=>{const f=e.target.files[0];if(!f)return;
+if(!('BarcodeDetector' in window)){msg('m1','Browser ini belum bisa membaca QR dari gambar. Pindai QRIS dengan aplikasi scanner (mis. Google Lens), salin teksnya, lalu tempel di kolom di bawah.',1);return}
+try{const bmp=await createImageBitmap(f);const r=await new BarcodeDetector({formats:['qr_code']}).detect(bmp);if(r.length){$('raw').value=r[0].rawValue;check()}else msg('m1','QR tidak terbaca. Coba gambar yang lebih jelas atau crop area QR.',1)}catch(err){msg('m1','Gagal membaca gambar: '+err,1)}};
+$('raw').oninput=check;
+function msg(id,t,e){$(id).textContent=t;$(id).className='msg '+(e?'err':'ok')}
+function check(){try{const s=validate($('raw').value);msg('m1','QRIS terbaca: '+merchant(parse(s)))}catch(e){if($('raw').value.trim())msg('m1',e,1)}}
+$('save').onclick=()=>{try{const v=validate($('raw').value);if(store.set('qris_statis',v))msg('m1','QRIS tersimpan di browser ini.');else msg('m1','Penyimpanan tidak tersedia di tampilan ini. Akan berfungsi saat file dibuka langsung di browser.',1)}catch(e){msg('m1',e,1)}};
+const saved=store.get('qris_statis');if(saved){$('raw').value=saved;check()}
+
+$('go').onclick=()=>{try{
+const s=validate($('raw').value);const amt=Math.round(Number($('amt').value));if(!amt||amt<1)throw'Masukkan nominal yang benar';
+let t=parse(s.slice(0,-8)).filter(x=>!['54','55','56','57','63'].includes(x.tag));
+t.forEach(x=>{if(x.tag==='01')x.val='12'});
+t.push({tag:'54',val:String(amt)});
+const ft=$('feeType').value,fv=Number($('fee').value);let feeTxt='-';
+if(ft&&fv>0){if(ft==='fix'){t.push({tag:'55',val:'02'},{tag:'56',val:String(Math.round(fv))});feeTxt='Rp '+Math.round(fv).toLocaleString('id-ID')}else{t.push({tag:'55',val:'03'},{tag:'57',val:String(fv)});feeTxt=fv+'%'}}
+t.sort((a,b)=>+a.tag-+b.tag);
+let out=t.map(x=>tlv(x.tag,x.val)).join('')+'6304';out+=crc16(out);
+const cv=QR.toCanvas(out,8,4);const im=new Image();im.src=cv.toDataURL('image/png');$('qr').innerHTML='';$('qr').appendChild(im);
+$('det').innerHTML='<b>'+merchant(t)+'</b><br>Nominal: Rp '+amt.toLocaleString('id-ID')+'<br>Biaya layanan: '+feeTxt+'<br><small style="word-break:break-all">'+out+'</small>';
+$('out').style.display='block';msg('m2','QRIS dinamis berhasil dibuat.');window.lastAmt=amt;
+}catch(e){msg('m2',e,1)}};
+$('dl').onclick=()=>{const i=$('qr').querySelector('img');const a=document.createElement('a');a.href=i.src;a.download='qris-'+(window.lastAmt||'')+'.png';a.click()};
+</script>
+
+
+</body></html>
